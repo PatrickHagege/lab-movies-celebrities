@@ -1,8 +1,15 @@
-const router = require("express").Router();
+const express = require("express");
+const router = express.Router();
 
-/* GET home page */
-router.get("/", (req, res, next) => {
+const Celebrity = require("./../models/Celebrity.model");
+const Movie = require("./../models/Movie.model");
+
+/* GET home page. */
+
+router.get("/", (req, res) => {
   res.render("index");
 });
 
-module.exports = router;
+/* GET dashboard page  */
+
+module.exports = router; // MANDATORY
